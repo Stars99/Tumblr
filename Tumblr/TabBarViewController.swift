@@ -10,6 +10,8 @@ import UIKit
 
 class TabBarViewController: UIViewController {
     
+    @IBOutlet weak var explorePopUp: UIButton!
+   
     //Create an outlet for the contentView by ctrl + drag
     @IBOutlet weak var contentView: UIView!
     
@@ -22,7 +24,8 @@ class TabBarViewController: UIViewController {
     var searchViewController2: UIViewController!
     var accountViewController3: UIViewController!
     var trendingViewController4: UIViewController!
-    
+    var loginViewController5 : UIViewController!
+
     //Link your ViewController Variables to the ViewControllers in the Storyboard.
     let main = UIStoryboard(name: "Main", bundle: nil)
     
@@ -36,20 +39,43 @@ class TabBarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        UIView.animate(withDuration:0.8, delay: 0.0,
+                       // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+            options: [.autoreverse,.repeat], animations: { () -> Void in
+                self.explorePopUp.transform = CGAffineTransform(translationX: 0, y: 10)
+            }, completion: nil)
+        
+        
+        
+        
+        
         homeViewController1 = main.instantiateViewController(withIdentifier:"homeViewControllerId")
         searchViewController2 = main.instantiateViewController(withIdentifier:"searchViewControllerId")
         accountViewController3 = main.instantiateViewController(withIdentifier:"accountViewControllerId")
         trendingViewController4 = main.instantiateViewController(withIdentifier:"trendingViewControllerId")
         
+   loginViewController5 = main.instantiateViewController(withIdentifier:"loginViewControllerId")
+        
+
         buttons[selectedIndex].isSelected = true
         didPressTabBarButtons(buttons[selectedIndex])
         
     }
+    
+    
+    @IBAction func didPressExploreButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
 
     
     
     //Create a Shared Action for the Buttons
     @IBAction func didPressTabBarButtons(_ sender: UIButton) {
+        
         
         //you should match whatever the content view is here
         homeViewController1.view.frame = contentView.bounds
@@ -64,7 +90,7 @@ class TabBarViewController: UIViewController {
         trendingViewController4.view.frame = contentView.bounds//using bounds to make x n y zero
         
         //Add each ViewController to your viewControllers array
-        viewController = [homeViewController1, searchViewController2, accountViewController3, trendingViewController4]
+        viewController = [homeViewController1, searchViewController2, accountViewController3, trendingViewController4, loginViewController5]
 
         
         //keep track of the previous button

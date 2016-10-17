@@ -19,5 +19,6 @@ class SearchViewController: UIViewController {
         super.didReceiveMemoryWarning()
       
     }
+    
   
 }

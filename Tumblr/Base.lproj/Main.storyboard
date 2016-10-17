@@ -70,6 +70,11 @@
                                             <segue destination="L35-8N-MMN" kind="modal" identifier="composeButtonSegue" id="0Ng-wj-d45"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="L3j-pP-JDA">
+                                        <frame key="frameInset" minX="32" minY="-54" width="157" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="explore_popup"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15294117647058825" green="0.21176470588235294" blue="0.29019607843137257" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -78,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="17d-Sl-qhM" id="nuC-F7-pqm"/>
+                        <outlet property="explorePopUp" destination="L3j-pP-JDA" id="PTD-kJ-fs3"/>
                         <outletCollection property="buttons" destination="NbO-1g-zQA" collectionClass="NSMutableArray" id="DPM-zi-9Uf"/>
                         <outletCollection property="buttons" destination="bN5-q0-QLw" collectionClass="NSMutableArray" id="thc-lb-LLK"/>
                         <outletCollection property="buttons" destination="TFH-Br-wcD" collectionClass="NSMutableArray" id="er2-dU-VCq"/>
@@ -108,13 +114,52 @@
                                 <frame key="frameInset" minX="84" minY="318" width="207" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="liZ-7Q-85b" userLabel="loginButton">
+                                <frame key="frameInset" minX="293" minY="40" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="iGL-1s-902" kind="modal" id="QLx-XQ-Thi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="284-GD-WBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-504.5" y="1025.5"/>
+            <point key="canvasLocation" x="-506" y="1173"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="jfS-NM-X5z">
+            <objects>
+                <viewController storyboardIdentifier="loginViewControllerId" id="iGL-1s-902" customClass="LoginViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5fM-mT-AOq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.55000000000000004" contentMode="scaleToFill" misplaced="YES" id="9mJ-JA-1WB">
+                                <frame key="frameInset" minX="-1" minY="261" width="376" height="406"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.21176470589999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="login_form" id="hXy-wm-mvr">
+                                <frame key="frameInset" minX="-1" minY="121" width="376" height="132"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kZ2-3e-cSW">
+                                <frame key="frameInset" minX="37" minY="188" width="143" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="didPressCancelButton:" destination="iGL-1s-902" eventType="touchUpInside" id="SRW-a1-leN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cig-XA-IGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-73.5" y="1172.5"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="WoG-Ad-rpI">
@@ -134,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFQ-hT-ARN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85.5" y="1000.5"/>
+            <point key="canvasLocation" x="448" y="1001"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="De1-8U-N4N">
@@ -147,32 +192,40 @@
                             <view alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" id="fvg-gS-elo">
                                 <frame key="frameInset" width="375" height="620"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UXY-IC-l8s" userLabel="photoButton">
+                                        <frame key="frameInset" minX="127" minY="210" width="121" height="108"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="photo_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uGe-Im-Kdw" userLabel="quoteButton">
+                                        <frame key="frameInset" minX="245" minY="210" width="103" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="quote_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oE9-ez-C1U" userLabel="linkButton">
+                                        <frame key="frameInset" minX="25" minY="317" width="105" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="link_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mVF-dO-Wln" userLabel="chatButton">
+                                        <frame key="frameInset" minX="140" minY="317" width="94" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="chat_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UQO-TR-YFm" userLabel="videoButton">
+                                        <frame key="frameInset" minX="245" minY="317" width="103" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="video_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vHe-wg-2y8">
+                                        <frame key="frameInset" minX="25" minY="210" width="105" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="text_icon"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.16078431372549021" green="0.21176470588235294" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="text_icon" id="wMr-f4-dbZ">
-                                <frame key="frameInset" minX="27" minY="190" width="75" height="95"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="photo_icon" id="WFp-9Y-Cca">
-                                <frame key="frameInset" minX="150" minY="190" width="75" height="95"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="quote_icon" id="K6m-b1-qmI">
-                                <frame key="frameInset" minX="265" minY="190" width="75" height="96"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="link_icon" id="ZPB-EI-Y7l">
-                                <frame key="frameInset" minX="27" minY="311" width="75" height="95"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="chat_icon" id="AQ6-Y8-4gW">
-                                <frame key="frameInset" minX="148" minY="311" width="75" height="96"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="video_icon" id="EKT-Pr-x7X">
-                                <frame key="frameInset" minX="270" minY="311" width="75" height="96"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eRo-rt-qlv" userLabel="nevermindButton">
                                 <frame key="frameInset" minY="618" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -183,10 +236,19 @@
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="chatButton" destination="mVF-dO-Wln" id="3Cw-RS-W7B"/>
+                        <outlet property="composeViewController" destination="vtv-xe-DmC" id="KJT-eB-0Fo"/>
+                        <outlet property="linkButton" destination="oE9-ez-C1U" id="nSF-ZP-tXO"/>
+                        <outlet property="photoButton" destination="UXY-IC-l8s" id="mlv-Wc-xka"/>
+                        <outlet property="quoteButton" destination="uGe-Im-Kdw" id="5hl-eY-yP7"/>
+                        <outlet property="textButton" destination="vHe-wg-2y8" id="Hhu-nJ-fL9"/>
+                        <outlet property="videoButton" destination="UQO-TR-YFm" id="YaL-kn-fSo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCY-ns-OXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="855" y="1001"/>
+            <point key="canvasLocation" x="854.5" y="1000.5"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="jj7-Nc-FQ0">
@@ -246,12 +308,14 @@
         <image name="account_selected_icon" width="35" height="35"/>
         <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
+        <image name="explore_popup" width="185" height="77"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>
         <image name="home_selected_icon" width="35" height="35"/>
         <image name="home_spinner" width="146" height="146"/>
         <image name="link_icon" width="75" height="95"/>
+        <image name="login_form" width="300" height="132"/>
         <image name="nevermind" width="320" height="53"/>
         <image name="photo_icon" width="75" height="95"/>
         <image name="quote_icon" width="75" height="96"/>
