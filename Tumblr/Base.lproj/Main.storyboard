@@ -118,7 +118,7 @@
                                 <frame key="frameInset" minX="293" minY="40" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="iGL-1s-902" kind="modal" id="QLx-XQ-Thi"/>
+                                    <segue destination="iGL-1s-902" kind="modal" id="BLb-wX-9pa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,33 +133,36 @@
         <scene sceneID="jfS-NM-X5z">
             <objects>
                 <viewController storyboardIdentifier="loginViewControllerId" id="iGL-1s-902" customClass="LoginViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5fM-mT-AOq">
+                    <view key="view" alpha="0.25" contentMode="scaleToFill" id="5fM-mT-AOq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.55000000000000004" contentMode="scaleToFill" misplaced="YES" id="9mJ-JA-1WB">
-                                <frame key="frameInset" minX="-1" minY="261" width="376" height="406"/>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" id="9mJ-JA-1WB">
+                                <frame key="frameInset" minX="-1" width="376" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="hXy-wm-mvr">
+                                        <frame key="frameInset" minY="267" width="376" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kZ2-3e-cSW" userLabel="cancelButton">
+                                        <frame key="frameInset" minX="42" minY="357" width="144" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didPressCancelButton:" destination="iGL-1s-902" eventType="touchUpInside" id="SRW-a1-leN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.1529411765" green="0.21176470589999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="login_form" id="hXy-wm-mvr">
-                                <frame key="frameInset" minX="-1" minY="121" width="376" height="132"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kZ2-3e-cSW">
-                                <frame key="frameInset" minX="37" minY="188" width="143" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="didPressCancelButton:" destination="iGL-1s-902" eventType="touchUpInside" id="SRW-a1-leN"/>
-                                </connections>
-                            </button>
                         </subviews>
+                        <color key="backgroundColor" red="0.1529411765" green="0.21176470589999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="JZO-5k-w84"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cig-XA-IGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-73.5" y="1172.5"/>
+            <point key="canvasLocation" x="25" y="1173"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="WoG-Ad-rpI">
@@ -179,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFQ-hT-ARN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="1001"/>
+            <point key="canvasLocation" x="472" y="1173"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="De1-8U-N4N">
@@ -189,7 +192,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" id="fvg-gS-elo">
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" id="fvg-gS-elo">
                                 <frame key="frameInset" width="375" height="620"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -224,7 +227,7 @@
                                         <state key="normal" image="text_icon"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.16078431372549021" green="0.21176470588235294" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.21176470589999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eRo-rt-qlv" userLabel="nevermindButton">
                                 <frame key="frameInset" minY="618" width="375" height="52"/>
@@ -248,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCY-ns-OXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854.5" y="1000.5"/>
+            <point key="canvasLocation" x="894" y="1173"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="jj7-Nc-FQ0">
@@ -268,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gxl-Eu-LTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314.5" y="1000.5"/>
+            <point key="canvasLocation" x="1330" y="1173"/>
         </scene>
         <!--Trending View Controller-->
         <scene sceneID="D4Z-SZ-j5v">

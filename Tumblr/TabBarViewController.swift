@@ -9,6 +9,7 @@
 import UIKit
 
 class TabBarViewController: UIViewController {
+   
     
     @IBOutlet weak var explorePopUp: UIButton!
    
@@ -38,17 +39,13 @@ class TabBarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        UIView.animate(withDuration:0.8, delay: 0.0,
-                       // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+    
+           UIView.animate(withDuration:0.8, delay: 0.0,
             options: [.autoreverse,.repeat], animations: { () -> Void in
                 self.explorePopUp.transform = CGAffineTransform(translationX: 0, y: 10)
             }, completion: nil)
         
-        
-        
-        
+    
         
         homeViewController1 = main.instantiateViewController(withIdentifier:"homeViewControllerId")
         searchViewController2 = main.instantiateViewController(withIdentifier:"searchViewControllerId")
@@ -64,18 +61,14 @@ class TabBarViewController: UIViewController {
     }
     
     
-    @IBAction func didPressExploreButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
+    
+    
     
     
     
 
-    
-    
     //Create a Shared Action for the Buttons
     @IBAction func didPressTabBarButtons(_ sender: UIButton) {
-        
         
         //you should match whatever the content view is here
         homeViewController1.view.frame = contentView.bounds
