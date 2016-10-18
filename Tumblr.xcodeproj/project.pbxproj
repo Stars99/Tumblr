@@ -51,6 +51,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C0FD7681DB5DE6A00636708 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C4E9CD21DB095E50064A312 /* TabBarViewController.swift */,
+				3C4E9CD41DB097DF0064A312 /* HomeViewController.swift */,
+				3C4E9CD61DB09C210064A312 /* SearchViewController.swift */,
+				3C4E9CD81DB154FA0064A312 /* ComposeViewController.swift */,
+				3C0FD75E1DB18FB600636708 /* AccountViewController.swift */,
+				3C0FD7601DB1905100636708 /* TrendingViewController.swift */,
+				3C0FD7661DB5395A00636708 /* LoginViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3C0FD7691DB5DE8C00636708 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3C0FD76A1DB5DE9300636708 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		3C4E9CB41DB0911A0064A312 = {
 			isa = PBXGroup;
 			children = (
@@ -70,20 +98,16 @@
 		3C4E9CBF1DB0911A0064A312 /* Tumblr */ = {
 			isa = PBXGroup;
 			children = (
+				3C0FD76A1DB5DE9300636708 /* Model */,
+				3C0FD7691DB5DE8C00636708 /* View */,
+				3C0FD7681DB5DE6A00636708 /* Controller */,
 				3C4E9CC01DB0911A0064A312 /* AppDelegate.swift */,
+				3C4E9CC71DB0911A0064A312 /* Assets.xcassets */,
 				3C4E9CC41DB0911A0064A312 /* Main.storyboard */,
 				3C0FD7621DB48C0E00636708 /* BaseTransition.swift */,
 				3C0FD7631DB48C0E00636708 /* FadeTransition.swift */,
-				3C4E9CC71DB0911A0064A312 /* Assets.xcassets */,
 				3C4E9CC91DB0911A0064A312 /* LaunchScreen.storyboard */,
 				3C4E9CCC1DB0911A0064A312 /* Info.plist */,
-				3C4E9CD21DB095E50064A312 /* TabBarViewController.swift */,
-				3C4E9CD41DB097DF0064A312 /* HomeViewController.swift */,
-				3C4E9CD61DB09C210064A312 /* SearchViewController.swift */,
-				3C4E9CD81DB154FA0064A312 /* ComposeViewController.swift */,
-				3C0FD75E1DB18FB600636708 /* AccountViewController.swift */,
-				3C0FD7601DB1905100636708 /* TrendingViewController.swift */,
-				3C0FD7661DB5395A00636708 /* LoginViewController.swift */,
 			);
 			path = Tumblr;
 			sourceTree = "<group>";
