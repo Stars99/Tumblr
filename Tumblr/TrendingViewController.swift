@@ -18,10 +18,7 @@ class TrendingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
        scrollView.contentSize = imageView.frame.size
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

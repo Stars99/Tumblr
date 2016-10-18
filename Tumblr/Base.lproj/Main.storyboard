@@ -118,7 +118,7 @@
                                 <frame key="frameInset" minX="293" minY="40" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="iGL-1s-902" kind="modal" id="BLb-wX-9pa"/>
+                                    <segue destination="iGL-1s-902" kind="modal" modalTransitionStyle="crossDissolve" id="Jfy-zw-XI1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,37 +132,48 @@
         <!--Login View Controller-->
         <scene sceneID="jfS-NM-X5z">
             <objects>
-                <viewController storyboardIdentifier="loginViewControllerId" id="iGL-1s-902" customClass="LoginViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.25" contentMode="scaleToFill" id="5fM-mT-AOq">
+                <viewController storyboardIdentifier="loginViewControllerId" modalPresentationStyle="overCurrentContext" id="iGL-1s-902" customClass="LoginViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.84999999999999998" contentMode="scaleToFill" id="5fM-mT-AOq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" id="9mJ-JA-1WB">
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" id="9mJ-JA-1WB">
                                 <frame key="frameInset" minX="-1" width="376" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="hXy-wm-mvr">
-                                        <frame key="frameInset" minY="267" width="376" height="132"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kZ2-3e-cSW" userLabel="cancelButton">
-                                        <frame key="frameInset" minX="42" minY="357" width="144" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="didPressCancelButton:" destination="iGL-1s-902" eventType="touchUpInside" id="SRW-a1-leN"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" red="0.1529411765" green="0.21176470589999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="login_form" id="hXy-wm-mvr">
+                                <frame key="frameInset" minX="-1" minY="267" width="376" height="132"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kZ2-3e-cSW" userLabel="cancelButton">
+                                <frame key="frameInset" minX="16" minY="357" width="144" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didPressCancelButton:" destination="iGL-1s-902" eventType="touchUpInside" id="SRW-a1-leN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="iNV-Xt-UWv">
+                                <frame key="frameInset" minX="7" minY="317" width="351" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="x1G-9M-Fkv">
+                                <frame key="frameInset" minX="7" minY="269" width="351" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.1529411765" green="0.21176470589999999" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="JZO-5k-w84"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cig-XA-IGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="1173"/>
+            <point key="canvasLocation" x="24.5" y="1172.5"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="WoG-Ad-rpI">
@@ -251,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCY-ns-OXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="1173"/>
+            <point key="canvasLocation" x="628" y="1133"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="jj7-Nc-FQ0">
@@ -286,7 +297,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trending_feed" id="6pW-4u-y1L">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1477"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1711"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
@@ -302,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1K8-wp-tn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844.5" y="1000.5"/>
+            <point key="canvasLocation" x="1758.5" y="1172.5"/>
         </scene>
     </scenes>
     <resources>

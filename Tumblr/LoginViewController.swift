@@ -12,7 +12,8 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +22,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didPressCancelButton(_ sender: UIButton) {
-        
         dismiss(animated: true, completion: nil)
         
     }

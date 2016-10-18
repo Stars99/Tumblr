@@ -60,11 +60,7 @@ class TabBarViewController: UIViewController {
         
     }
     
-    
-    
-    
-    
-    
+
     
 
     //Create a Shared Action for the Buttons
@@ -75,6 +71,8 @@ class TabBarViewController: UIViewController {
         
         //you should match whatever the content view is here
         searchViewController2.view.frame = contentView.bounds//using bounds to make x n y zero
+        
+        self.explorePopUp.alpha = 1
         
         //you should match whatever the content view is here
         accountViewController3.view.frame = contentView.bounds//using bounds to make x n y zero
